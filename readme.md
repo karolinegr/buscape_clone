@@ -2,19 +2,19 @@
 
 ---
 
-Para ver o projeto ao vivo, [clique aqui](http://example.com/). 
+Para ver o projeto ao vivo, [clique aqui](https://karolinegr.github.io/buscape_clone/). 
 
 Este projeto conta com um clone da página inicial do buscador e comparador de preços Buscapé. 
 
-![Imagem da página inicial do projeto](C:\Users\karol\Desktop\Frontstart\Buscape_clone\project_images\image1.PNG)
+![Imagem da página inicial do projeto](https://github.com/karolinegr/buscape_clone/blob/master/project_images/image1.PNG)
 
 Figura 1. Página inicial do projeto.
 
-![Página inicial do projeto com exibição do menu dropdown](C:\Users\karol\Desktop\Frontstart\Buscape_clone\project_images\image2.PNG)
+![Página inicial do projeto com exibição do menu dropdown](https://github.com/karolinegr/buscape_clone/blob/master/project_images/image2.PNG)
 
 Figura 2. Página inicial do projeto com exibição do menu dropdown.
 
-![Página inicial com foco no carrossel de cards.](C:\Users\karol\Desktop\Frontstart\Buscape_clone\project_images\image3.PNG)
+![Página inicial com foco no carrossel de cards.](https://github.com/karolinegr/buscape_clone/blob/master/project_images/image3.PNG)
 
 Figura 3. Página inicial com foco no carrossel de cards.
 
