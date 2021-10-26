@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="16x16" href="https://www.buscape.com.br/ais/_next/public/asteroid/buscape/favicon/favicon-16x16.png">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet/less" type="text/css" href="styles.less" />
+    <title>Compare preço no Buscapé e encontre a melhor oferta!</title>
+  </head>
+  <body>
+    <header>
+      <div class="container container-lg">
+        <div class="row">
+          <div class="col">
+            <div class="logo-container">
+              <img
+                id="logo-img"
+                src="https://www.buscape.com.br/ais/_next/static/logo~eBDMymKE.fa9fddc7.svg#logo"
+                alt="Logo Buscapé"
+              />
+            </div>
+          </div>
+
+          <div class="col col-xl-8">
+            <div class="search-container">
+              <span>
+                <input
+                  type="text"
+                  name="search"
+                  id="search-bar"
+                  placeholder="Digite sua busca..." />
+                <submit id="search-button" type="submit">
+                  <i data-feather="search"></i> </submit
+              ></span>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="login-container">
+              <a id="login" href="">
+                <div id="user-img-container"><i data-feather="user"></i></div>
+                <span id="login-text">Entrar</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div id="lower-header">
+        <div class="nav-container">
+          <div class="row">
+            <div class="col-2">
+            </div>
+
+            <div class="col-8">
+              <div class="category-container">
+                <i data-feather="menu"></i>
+                <span id="category-menu">Categorias</span>
+                <div class="extended-menu">
+                  <ul id="general-category">
+                    <li>Celulares e telefones</li>
+                    <li>Informática</li>
+                    <li>TV e Eletônicos</li>
+                    <li>Eletrodomésticos</li>
+                    <li>Eletroportáteis</li>
+                    <li>Moda e Acessórios</li>
+                    <li>Móveis e Decoração</li>
+                    <li>Esporte e Lazer</li>
+                    <li>Games</li>
+                    <li>Outras categorias</li>
+                  </ul>
+                  <ul id="other-category">
+                    <li>Cupons de Desconto</li>
+                    <li>Baixe nossa extensão</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="discount-container">
+                <a href="">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 25 24"
+                  >
+                    <path
+                      fill="#333"
+                      stroke="#333"
+                      d="M13.52 1.879l.006.005.006.006 1.6 1.5.163.152.222-.019 2.3-.2.028-.002.027-.006c.672-.134 1.254.318 1.412 1.01l.398 2.19.044.239.215.113 1.9 1 .015.008.015.007c.612.272.842 1.047.556 1.62l-1 2-.112.223.112.224 1 2c.128.257.139.588.025.91-.113.321-.334.585-.602.719h0l-.009.005-1.9 1-.215.113-.044.24-.398 2.19c-.145.629-.793 1.073-1.45 1.003l-2.193-.3-.236-.032-.173.163-1.6 1.5-.02.019-.018.02c-.386.451-1.146.494-1.667-.028l-.005-.005-.006-.006-1.6-1.5-.174-.163-.236.033-2.2.3-.015.002-.015.003c-.672.134-1.254-.318-1.412-1.01l-.398-2.19-.044-.239-.215-.114-1.9-1-.015-.007-.015-.007c-.612-.272-.842-1.047-.556-1.62l1-2 .112-.223-.112-.224-.995-1.989c-.29-.667-.073-1.378.586-1.747l1.895-.998.227-.12.035-.254.297-2.178c.15-.624.794-1.063 1.447-.994l2.193.3.236.032.174-.163 1.6-1.5.02-.019.018-.02c.386-.451 1.145-.494 1.666.028zm-2.687 2.18l-.007.006-.006.006c-.284.284-.731.445-1.113.454L7.645 4.23l-.473-.067-.09.468-.399 2.098c-.068.337-.265.623-.655.86l-1.887.994-.424.223.205.433.9 1.9h0l.005.01c.121.243.14.683-.012 1.077l-.893 1.885-.205.433.424.223 1.9 1 .023.013.024.01c.291.116.515.434.595.83v.003l.4 2.096.089.468.473-.067 2.1-.3h0l.011-.002c.422-.07.764.06 1.064.36l1.5 1.5.354.354.353-.353 1.5-1.5c.297-.297.733-.427 1.049-.364l.013.003.014.002 2.1.3.473.067.089-.468.4-2.096v-.002c.068-.337.265-.623.655-.86l1.887-.993.424-.224-.205-.433-.9-1.9h0l-.005-.01c-.122-.243-.141-.683.012-1.077l.893-1.885.205-.433-.424-.223-1.9-1-.023-.013-.024-.01c-.292-.116-.516-.434-.595-.83v-.003l-.4-2.096-.09-.468-.472.067-2.1.3h0l-.011.002c-.422.07-.764-.06-1.065-.36l-1.5-1.5-.341-.342-.353.33-1.5 1.4zm4.887 4.112l-.013.014-.013.015-5.985 6.982a.464.464 0 01-.247.122c-.077.01-.113-.011-.135-.033a.465.465 0 01-.132-.258c-.01-.077.011-.113.032-.134l.014-.014.012-.015 5.986-6.982a.463.463 0 01.247-.122c.077-.01.113.011.134.033a.466.466 0 01.133.258c.01.077-.011.113-.033.134zm-4.646.654c0 .447-.399.9-.9.9-.447 0-.9-.399-.9-.9 0-.435.377-.8 1-.8.424 0 .8.376.8.8zm4.3 5.7c0 .447-.399.9-.9.9-.524 0-.9-.376-.9-.9s.376-.9.9-.9c.501 0 .9.453.9.9z"
+                    ></path>
+                  </svg>
+                  <span id="discount-text">Cupons de Desconto</span>
+                </a>
+              </div>
+              <div class="blog-container">
+                <a href="">
+                  <i data-feather="file-minus"></i>
+                  <span id="blog-text">Blog</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="col" id="extension">
+              <div class="extension-container">
+                <a href="">Baixe nossa extensão</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="blackFriday-container">
+        <a href="">
+            A Black Friday 2021 vai começar! Veja como aproveitar as ofertas
+        </a>
+    </div>
+    
+    <div class="slider-container">
+        <span id="previous"><i data-feather="chevron-left"></i></span>
+        <span id="next"><i data-feather="chevron-right"></i></span>
+        <div id="slider" class="slider">
+          <img src="https://s.zst.com.br/prod/brickz/Heros_Buscape_23_10_Cashback_12_4de1dc29dd.png">
+          <img src="https://s.zst.com.br/prod/brickz/Heros_15_10_Live_do_Busca_reprise_novo_layout_desk_7c63c5293e.png">
+          <img src="https://s.zst.com.br/prod/brickz/Heros_Buscape_22_10_novo_layout_desk1_7395789672.png">
+          <img src="https://s.zst.com.br/prod/brickz/Heros_Buscape_22_10_novo_layout_desk2_3360b9d6ab.png">
+        </div>
+        <div class="dots-container">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+    </div>
+
+    <div class="products-category">
+        <div class="phone-container">
+            <a href="">
+                <img src="https://s.zst.com.br/prod/brickz/celular_a71ef87480_5c1091bc5e.svg">Celular
+            </a>
+        </div>
+        <div class="iphone-container">
+            <a href="">
+                <img src="https://s.zst.com.br/prod/brickz/icon_iphone_3a925f08b9.svg">Iphone
+            </a>
+        </div>
+        <div class="laptop-container">
+            <a href="">
+                <img src="https://s.zst.com.br/prod/brickz/icon_notebook_c6b6e251a1.svg">Notebook
+            </a>
+        </div>
+        <div class="tv-container">
+            <a href="">
+                <img src="https://s.zst.com.br/prod/brickz/TV_3fca037cce_d0b7787bab.svg">TV
+            </a>
+        </div>
+        <div class="fridge-container">
+            <a href=""> 
+                <img src="https://s.zst.com.br/prod/brickz/Geladeira_Hotlink_10d11bb247_10771bd450.svg">Geladeira
+            </a>
+        </div>
+        <div class="saldao-container">
+            <a href="">
+                <img src="https://s.zst.com.br/prod/brickz/supersaldao_cbc564d511_45ff114055.svg">SuperSaldão
+            </a>
+        </div>
+        <div class="others-container">
+            <a href="">
+                <img src="https://s.zst.com.br/prod/brickz/Todas_as_Categorias_ver_mais_c000cf5015_0b23e59f1e.svg">Outras categorias
+            </a>
+        </div>
+    </div>
+    
+    <div class="blog cashback">
+      <div id="cashback-title">
+        <div class="row">
+          <div class="col-10">
+            <h3>Buscapé cashback</h3>
+          </div>
+          <div class="col">
+            <div class="btns">
+              <button id="prevButton-info"><i data-feather="chevron-left"></i></button>
+              <button id="nextButton-info" ><i data-feather="chevron-right"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="blog-cashback-container">
+        <div class="card">
+          <img src="https://s.zst.com.br/prod/brickz/Busca_1_7d78a19e80.png" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Supermercado e Saúde com 12% de cashback</h5>
+            <p class="card-text">Veja as ofertas</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://s.zst.com.br/prod/brickz/Busca_2_1cb8a3e2ff.png" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Telefonia e Informática com 10% de cashback</h5>
+            <p class="card-text">Veja as ofertas</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://s.zst.com.br/prod/brickz/Busca_3_9f7cdb5a73.png" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Eletrodomésticos com 10% de cashback</h5>
+            <p class="card-text">Veja as ofertas</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://s.zst.com.br/prod/brickz/Busca_4_75baf15ac2.png" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Tudo para a sua casa com 10% de cashback</h5>
+            <p class="card-text">Veja as ofertas</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="products">
+      <div id="searched-title">
+        <div class="row">
+          <div class="col-10">
+            <h3>Só os mais buscados</h3>
+          </div>
+          <div class="col">
+            <div class="btns">
+              <button id="prevButton"><i data-feather="chevron-left"></i></button>
+              <button id="nextButton" ><i data-feather="chevron-right"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="searched-products swiper mySwiper">
+        <div class="sliderCards swiper-wrapper">
+          <div class="product-card swiper-slide">
+            <a href="" id="iphone">
+            <span class="info-container">Buscapé Indica</span>
+            <img src="https://i.zst.com.br/thumbs/45/15/15/929874931.jpg" class="photo-container">
+            <span class="product-name">Smartphone Apple iPhone 11 64GB iOS Câmera Dupla</span>
+            <span class="price-container">
+              <span id="startPrice">A partir de</span> <span class="price">R$ 3.999,00</span> <span class="installments">ou até 12x de R$ 358,33</span>
+            </span>
+            <span class="cashback"></span>
+            <span class="comparePrice">
+              Comparar em 15 lojas
+            </span>
+          </a></div>
+
+          <div class="product-card swiper-slide">
+            <a href="" id="airConditioning">
+            <span class="info-container">Menor preço e Cashback</span>
+            <span class="info-container" id="hidden-info">Buscapé Indica</span>
+            <img src="https://i.zst.com.br/thumbs/45/37/3b/931539906.jpg" class="photo-container">
+            <span class="product-name">Ar-Condicionado Split LG 9000 BTUs Frio S4-Q09WA51</span>
+            <span class="price-container">
+              <span id="startPrice">A partir de</span> <span class="price">R$ 1.670,76</span> <span class="installments">ou até 10x de R$ 198,90</span>
+            </span>
+            <span class="cashback active">Receba 2% de volta</span>
+            <span class="comparePrice">
+              Comparar em 20 lojas
+            </span>
+          </a></div>
+
+          <div class="product-card swiper-slide">
+            <a href="" id="xBox">
+            <span class="info-container">Buscapé Indica</span>
+            <img src="https://i.zst.com.br/thumbs/45/2/34/1201026976.jpg" class="photo-container">
+            <span class="product-name">Console Xbox Series S Microsoft</span>
+            <span class="price-container">
+              <span id="startPrice">A partir de</span> <span class="price">R$ 2.42155</span> <span class="installments">ou até 10x de R$ 254,90</span>
+            </span>
+            <span class="cashback"></span>
+            <span class="comparePrice">
+              Comparar em 15 lojas
+            </span>
+          </a></div>
+
+          <div class="product-card swiper-slide">
+            <a href="" id="fridge">
+            <span class="info-container">Buscapé Indica</span>
+            <img src="https://i.zst.com.br/thumbs/45/2d/11/2045252.jpg" class="photo-container">
+            <span class="product-name">Geladeira Consul CRB39 Frost Free 1 Porta 342 Litros Facilite</span>
+            <span class="rate" id="hidden-info"><i data-feather="star"></i> 4</span>
+            <span class="price-container">
+              <span id="startPrice">A partir de</span> <span class="price">R$ 1.540,00</span> <span class="installments">ou até 10x de R$ 154,00 sem juros</span>
+            </span>
+            <span class="cashback"></span>
+            <span class="comparePrice">
+              Comparar em 21 lojas
+            </span>
+          </a></div>
+
+          <div class="product-card swiper-slide">
+            <a href="" id="washer">
+            <span class="info-container">Menor preço e Cashback</span>
+            <img src="https://i.zst.com.br/thumbs/45/2f/32/868244726.jpg" class="photo-container">
+            <span class="product-name">Lavadora Brastemp 12kg BWK12AB</span>
+            <span class="price-container">
+              <span id="startPrice">A partir de</span> <span class="price">R$ 1.642,55</span> <span class="installments">ou até 10x de R$ 172,90</span>
+            </span>
+            <span class="cashback active">Receba 2% de volta</span>
+            <span class="comparePrice">
+              Comparar em 31 lojas
+            </span>
+          </a></div>
+          
+          <div class="product-card swiper-slide">
+            <a href="" id="fridge">
+              <span class="info-container">Menor preço e Cashback</span>
+              <span class="info-container" id="hidden-info">Buscapé Indica</span>
+              <img src="https://i.zst.com.br/thumbs/45/24/b/194270709.jpg" class="photo-container">
+              <span class="product-name">Geladeira Brastemp BRE57AK Frost Free Inverse 443 Litros Inox</span>
+              <span class="rate" id="hidden-info"><i data-feather="star"></i> 4</span>
+              <span class="price-container">
+                <span id="startPrice">A partir de</span> <span class="price">R$ 3.999,00</span> <span class="installments">ou até 10x de R$ 399,90 sem juros</span>
+              </span>
+              <span class="cashback active">Receba 2% de volta</span>
+              <span class="comparePrice">
+                Comparar em 27 lojas
+              </span>
+          </a></div>
+
+          <div class="product-card swiper-slide">
+              <a href="" id="fridge">
+                <span class="info-container">Buscapé Indica</span>
+                <img src="https://i.zst.com.br/thumbs/45/2d/11/2045252.jpg" class="photo-container">
+                <span class="product-name">Geladeira Brastemp BRM44HB Frost Free Duplex 375 Litros Painel Eletrônico</span>
+                <span class="rate" id="hidden-info"><i data-feather="star"></i> 4</span>
+                <span class="price-container">
+                  <span id="startPrice">A partir de</span> <span class="price">R$ 2.349,98</span> <span class="installments">ou até 12x de R$ 206,13</span>
+                </span>
+                <span class="cashback"></span>
+                <span class="comparePrice">
+                  Comparar em 23 lojas
+                </span>
+          </a></div>
+
+          <div class="product-card swiper-slide">
+            <a href="" id="tablet">
+            <span class="info-container">Buscapé Indica</span>
+            <img src="https://i.zst.com.br/thumbs/45/23/35/1110566199.jpg" class="photo-container">
+            <span class="product-name">Tablet Samsung Galaxy Tab S6 Lite SM-P615N 64GB 4G 10,4" 8 MP</span>
+            <span class="price-container">
+              <span id="startPrice">A partir de</span> <span class="price">R$ 2.098,55</span> <span class="installments">ou até 12x de R$ 184,08</span>
+            </span>
+            <span class="cashback"></span>
+            <span class="comparePrice">
+              Comparar em 17 lojas
+            </span>
+          </a></div>
+
+          <div class="product-card swiper-slide">
+            <a href="" id="laptop">
+            <span class="info-container">Menor preço e Cashback</span>
+            <img src="https://i.zst.com.br/thumbs/45/16/31/1630980842.jpg" class="photo-container">
+            <span class="product-name">Notebook Samsung Book X30 NP550XDA-KF2BR Intel Core i5 1135G7 15,6" 8GB SSD 256 GB</span>
+            <span class="price-container">
+              <span id="startPrice">A partir de</span> <span class="price">R$ 3.329,10</span> <span class="installments">ou até 10x de R$ 369,90</span>
+            </span>
+            <span class="cashback active">Receba 2% de volta</span>
+            <span class="comparePrice">
+              Comparar em 16 lojas
+            </span>
+          </a></div>
+
+          <div class="product-card swiper-slide">
+            <a href="" id="fridge">
+              <span class="info-container">Menor preço e Cashback</span>
+              <img src="https://i.zst.com.br/thumbs/45/2/13/195883460.jpg" class="photo-container">
+              <span class="product-name">Geladeira Electrolux DM84X Frost Free French Door Inverse 579 Litros Inox</span>
+              <span class="rate" id="hidden-info"><i data-feather="star"></i> 4</span>
+              <span class="price-container">
+                <span id="startPrice">A partir de</span> <span class="price">R$ 5.699,00</span> <span class="installments">ou até 12x de R$ 483,25</span>
+              </span>
+              <span class="cashback active">Receba 2% de volta</span>
+              <span class="comparePrice">
+                Comparar em 17 lojas
+              </span>
+          </a></div>
+
+          <div class="product-card swiper-slide">
+            <a href="" id="fridge">
+              <span class="info-container">Menor preço e Cashback</span>
+              <span class="info-container" id="hidden-info">Buscapé Indica</span>
+              <img src="https://i.zst.com.br/thumbs/45/22/32/198695509.jpg" class="photo-container">
+              <span class="product-name">Geladeira Electrolux DC35A Cycle Defrost Duplex 260 Litros</span>
+              <span class="rate" id="hidden-info"><i data-feather="star"></i> 4</span>
+              <span class="price-container">
+                <span id="startPrice">A partir de</span> <span class="price">R$ 1.678,32</span> <span class="installments">ou até 10x de R$ 199,80</span>
+              </span>
+              <span class="cashback active">Receba 2% de volta</span>
+              <span class="comparePrice">
+                Comparar em 24 lojas
+              </span>
+          </a></div>
+
+          <div class="product-card swiper-slide">
+            <a href="" id="washer">
+              <span class="info-container">Menor preço e Cashback</span>
+              <span class="info-container" id="hidden-info">Buscapé Indica</span>
+              <img src="https://i.zst.com.br/thumbs/45/0/3d/196706156.jpg" class="photo-container">
+              <span class="product-name">Lavadora Electrolux 13kg Jet & Clean LAC13</span>
+              <span class="price-container">
+                <span id="startPrice">A partir de</span> <span class="price">R$ 1.518,40</span> <span class="installments">ou até 10x de R$ 189,80</span>
+              </span>
+              <span class="cashback active">Receba 5% de volta</span>
+              <span class="comparePrice">
+                Comparar em 18 lojas
+              </span>
+          </a></div>
+
+          <div class="product-card swiper-slide">
+            <a href="" id="fryer">
+              <img src="https://i.zst.com.br/thumbs/45/4/e/1097141093.jpg" class="photo-container">
+              <span class="product-name">Fritadeira Elétrica Sem óleo Mondial Family Inox IV AF-30i Capacidade 3,5l Timer</span>
+              <span class="price-container">
+                <span id="startPrice">A partir de</span> <span class="price">R$ 336,90</span> <span class="installments">ou até 12x de R$ 31,19</span>
+              </span>
+              <span class="comparePrice">
+                Comparar em 17 lojas
+              </span>
+          </a></div>
+
+          <div class="product-card swiper-slide">
+            <a href="" id="tv">
+              <span class="info-container">Menor preço e Cashback</span>
+              <img src="https://i.zst.com.br/thumbs/45/23/39/1549548713.jpg" class="photo-container">
+              <span class="product-name">Smart TV LED 50" Samsung Crystal 4K HDR UN50AU7700GXZD</span>
+              <span class="price-container">
+                <span id="startPrice">A partir de</span> <span class="price">R$ 2.799,00</span> <span class="installments">ou até 12x de R$ 259,17</span>
+              </span>
+              <span class="cashback active">Receba 2% de volta</span>
+              <span class="comparePrice">
+                Comparar em 18 lojas
+              </span>
+          </a></div>
+          
+          <div class="product-card swiper-slide">
+            <a href="" id="fridge">
+              <img src="https://i.zst.com.br/thumbs/45/1e/33/35542181.jpg" class="photo-container">
+              <span class="product-name">Geladeira Consul CRD37 Cycle Defrost Duplex 334 Litros</span>
+              <span class="rate" id="hidden-info"><i data-feather="star"></i> 4</span>
+              <span class="price-container">
+                <span id="startPrice">A partir de</span> <span class="price">R$ 1.799,00</span> <span class="installments">ou até 10x de R$ 193,44</span>
+              </span>
+              <span class="comparePrice">
+                Comparar em 22 lojas
+              </span>
+          </a></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="blog help">
+      <div id="help-title">
+        <div class="row">
+          <div class="col-10">
+            <h3>Te ajudamos a achar o melhor produto</h3>
+          </div>
+          <div class="col">
+            <div class="btns">
+              <button id="prevButton-info"><i data-feather="chevron-left"></i></button>
+              <button id="nextButton-info" ><i data-feather="chevron-right"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="blog-help-container">
+        <div class="card">
+          <img src="https://s.zst.com.br/prod/brickz/1_5c7a706827.png" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">A gente conta qual iPhone é o ideal para você</h5>
+            <p class="card-text">Tem do XR até o iPhone 13</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://s.zst.com.br/prod/brickz/2_004ca4e50c.png" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Top 5 máquinas de lavar para você escolher</h5>
+            <p class="card-text">Modelos de até 12kg</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://s.zst.com.br/prod/brickz/3_5e68d54e9e.png" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Procurando uma geladeira? Saiba qual comprar!</h5>
+            <p class="card-text">Tem Brastemp, Consul e mais</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://s.zst.com.br/prod/brickz/4_fa09dddd43.png" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Veja o melhor notebook para rodar seus jogos</h5>
+            <p class="card-text">Separamos 7 modelos para você</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="phone-products">
+      <div id="searched-phone-title">
+        <div class="row">
+          <div class="col-10">
+            <h3>Os Celulares mais buscados</h3>
+          </div>
+          <div class="col">
+            <div class="btns">
+              <button id="prevButton-phone"><i data-feather="chevron-left"></i></button>
+              <button id="nextButton-phone" ><i data-feather="chevron-right"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="searched-phone-products swiper phoneSwiper">
+        <div class="sliderCards swiper-wrapper">
+          <div class="product-card swiper-slide">
+            <a href="" class="product" id="iphone">
+              <span class="info-container">Menor preço e Cashback</span>
+              <span class="info-container" id="hidden-info">Buscapé Indica</span>
+            <img src="https://i.zst.com.br/thumbs/45/15/15/929874931.jpg" class="photo-container">
+            <span class="product-name">Smartphone Apple iPhone 11 64GB iOS Câmera Dupla</span>
+            <span class="price-container">
+              <span id="startPrice">A partir de</span> <span class="price">R$ 3.999,00</span> <span class="installments">ou até 12x de R$ 358,33</span>
+            </span>
+            <span class="cashback active">Receba 2% de volta</span>
+            <span class="comparePrice">
+              Comparar em 15 lojas
+            </span>
+          </a></div>
+
+          <div class="product-card swiper-slide">
+            <a href="" class="product" id="samsung">
+            <span class="info-container off"></span>
+            <img src="https://i.zst.com.br/thumbs/45/10/16/1251501705.jpg" class="photo-container">
+            <span class="product-name">Smartphone Samsung Galaxy S20 FE SM-G780F 128GB Android</span>
+            <span class="price-container">
+              <span id="startPrice">A partir de</span> <span class="price">R$ 2.099,00</span> <span class="installments">ou até 12x de R$ 184,12</span>
+            </span>
+            <span class="cashback"></span>
+            <span class="comparePrice">
+              Comparar em 20 lojas
+            </span>
+          </a></div>
+
+          <div class="product-card swiper-slide">
+            <a href="" class="product" id="samsung">
+            <span class="info-container off"></span>
+            <img src="https://i.zst.com.br/thumbs/45/39/f/1456021832.jpg" class="photo-container">
+            <span class="product-name">Smartphone Samsung Galaxy A32 SM-A325M 128GB Android</span>
+            <span class="price-container">
+              <span id="startPrice">A partir de</span> <span class="price">R$ 1.329,05</span> <span class="installments">ou até 12x de R$ 116,58</span>
+            </span>
+            <span class="cashback"></span>
+            <span class="comparePrice">
+              Comparar em 20 lojas
+            </span>
+          </a></div>
+
+          <div class="product-card swiper-slide">
+            <a href="" class="product" id="iphone">
+            <span class="info-container">Menor preço e Cashback</span>
+            <span class="info-container" id="hidden-info">Buscapé Indica</span>
+            <img src="https://i.zst.com.br/thumbs/45/3f/34/929873676.jpg" class="photo-container">
+            <span class="product-name">Smartphone Apple iPhone 11 128GB iOS Câmera Dupla</span>
+            <span class="price-container">
+              <span id="startPrice">A partir de</span> <span class="price">R$ 4.064,19</span> <span class="installments">ou até 10x de R$ 437,01</span>
+            </span>
+            <span class="cashback active">Receba 2% de volta</span>
+            <span class="comparePrice">
+              Comparar em 21 lojas
+            </span>
+          </a></div>
+
+          <div class="product-card swiper-slide">
+            <a href="" class="product" id="motorola">
+            <span class="info-container">Menor preço e Cashback</span>
+            <img src="https://i.zst.com.br/thumbs/45/36/2b/1442160774.jpg" class="photo-container">
+            <span class="product-name">Smartphone Motorola Moto G G30 XT2129-1 128GB Android</span>
+            <span class="price-container">
+              <span id="startPrice">A partir de</span> <span class="price">R$ 1.348,05</span> <span class="installments">ou até 10x de R$ 141,90</span>
+            </span>
+            <span class="cashback active">Receba 2% de volta</span>
+            <span class="comparePrice">
+              Comparar em 21 lojas
+            </span>
+          </a></div>
+          
+          <div class="product-card swiper-slide">
+            <a href="" class="product" id="iphone">
+            <span class="info-container off"></span>
+            <img src="https://i.zst.com.br/thumbs/45/8/17/1297612682.jpg" class="photo-container">
+            <span class="product-name">Smartphone Apple iPhone 12 128GB iOS Câmera Dupla</span>
+            <span class="price-container">
+              <span id="startPrice">A partir de</span> <span class="price">R$ 5.192,65</span> <span class="installments">ou até 12x de R$ 458,17</span>
+            </span>
+            <span class="comparePrice">
+              Comparar em 21 lojas
+            </span>
+          </a></div>
+
+          <div class="product-card swiper-slide">
+            <a href="" class="product" id="samsung">
+            <span class="info-container">Buscapé Indica</span>
+            <img src="https://i.zst.com.br/thumbs/45/1/a/1932192719.jpg" class="photo-container">
+            <span class="product-name">Smartphone Samsung Galaxy M62 SM-M625F 128GB Android</span>
+            <span class="price-container">
+              <span id="startPrice">A partir de</span> <span class="price">R$ 1.659,10</span> <span class="installments">ou até 12x de R$ 154,08</span>
+            </span>
+            <span class="comparePrice">
+              Comparar em 21 lojas
+            </span>
+          </a></div>
+
+          <div class="product-card swiper-slide">
+            <a href="" class="product" id="xiaomi">
+            <span class="info-container off"></span>
+            <img src="https://i.zst.com.br/thumbs/45/3b/3f/-24917896.jpg" class="photo-container">
+            <span class="product-name">Smartphone Xiaomi Pocophone Poco X3 Pro 8GB RAM 256GB Android</span>
+            <span class="price-container">
+              <span id="startPrice">A partir de</span> <span class="price">R$ 1.799,52</span> <span class="installments">ou até 12x de R$ 163,00</span>
+            </span>
+            <span class="comparePrice">
+              Comparar em 21 lojas
+            </span>
+          </a></div>
+
+          <div class="product-card swiper-slide">
+            <a href="" class="product" id="samsung">
+            <span class="info-container off"></span>
+            <img src="https://i.zst.com.br/thumbs/45/22/38/1762635099.jpg" class="photo-container">
+            <span class="product-name">Smartphone Samsung Galaxy A22 4GB RAM 128GB Android Câmera Quádrupla 2 Chips</span>
+            <span class="price-container">
+              <span id="startPrice">A partir de</span> <span class="price">R$ 1.216,00</span> <span class="installments">ou até 12x de R$ 101,33</span>
+            </span>
+            <span class="comparePrice">
+              Comparar em 21 lojas
+            </span>
+          </a></div>
+
+          <div class="product-card swiper-slide">
+            <a href="" class="product" id="iphone">
+            <span class="info-container">Menor preço e Cashback</span>
+            <img src="https://i.zst.com.br/thumbs/45/e/b/665050231.jpg" class="photo-container">
+            <span class="product-name">Smartphone Apple iPhone XR 64GB iOS 12.0 MP</span>
+            <span class="price-container">
+              <span id="startPrice">A partir de</span> <span class="price">R$ 2.960,10</span> <span class="installments">ou até 12x de R$ 274,08</span>
+            </span>
+            <span class="cashback active">Receba 2% de volta</span>
+            <span class="comparePrice">
+              Comparar em 21 lojas
+            </span>
+          </a></div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="blog match">
+      <div id="match-title">
+        <div class="row">
+          <div class="col-10">
+            <h3>Ache o match perfeito para você</h3>
+          </div>
+          <div class="col">
+            <div class="btns">
+              <button id="prevButton-info"><i data-feather="chevron-left"></i></button>
+              <button id="nextButton-info" ><i data-feather="chevron-right"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="blog-match-container">
+        <div class="card">
+          <img src="https://s.zst.com.br/prod/brickz/5_f54fc3e330.png" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Monte o seu próprio cinema dentro de casa</h5>
+            <p class="card-text">cnontre TV e soundbar aqui</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://s.zst.com.br/prod/brickz/6_4b51ecedbb.png" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Produtos qu vão te deixar jogar onde quiser</h5>
+            <p class="card-text">Console portátil, fones e mais</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://s.zst.com.br/prod/brickz/7_a66b267072.png" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Itens para tirar o seu Projeto Verão do Papel</h5>
+            <p class="card-text">Para treinos em casa ou fora</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://s.zst.com.br/prod/brickz/8_3d622f79cf.png" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">O que você precisa para se tornar influencer</h5>
+            <p class="card-text">Só os melhores acessórios</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="blog blackFriday">
+      <div id="help-blackFriday">
+        <div class="row">
+          <div class="col-10">
+            <h3>Esquenta Black Friday</h3>
+          </div>
+          <div class="col">
+            <div class="btns">
+              <button id="prevButton-info"><i data-feather="chevron-left"></i></button>
+              <button id="nextButton-info" ><i data-feather="chevron-right"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="blog-blackFriday-container">
+        <div class="card">
+          <img src="https://s.zst.com.br/prod/brickz/9_d20ccec9ba.png" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Veja em qual dia acontece a Black Friday</h5>
+            <p class="card-text">Saiba como funciona a data</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://s.zst.com.br/prod/brickz/10_6a75c21179.png" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">As melhores dicas para você não perder nada</h5>
+            <p class="card-text">Aqui você compra mais barato</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://s.zst.com.br/prod/brickz/11_07ae46248c.png" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Na dúvida se vale a pena? A gente te conta!</h5>
+            <p class="card-text">Faça as melhores compras</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://s.zst.com.br/prod/brickz/12_32ada1ce6a.png" class="card-img-top">
+          <div class="card-body">
+            <h5 class="card-title">Crie um Alerta e receba as melhores ofertas</h5>
+            <p class="card-text">Acompanhe também o Histórico</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="app-download">
+      <div class="row">
+        <div class="col-8">
+          <h4>Baixe nosso app também</h4>
+          <h6>Compare preços mais rápido, e tenha descontos exclusivos.</h6>
+        </div>
+        <div class="col">
+          <div class="apps">
+            <a href=""><img src="https://i1.zst.com.br/ais/_next/public/asteroid/default/btn-google_play.svg"></a>
+            <a href=""><img src="https://i1.zst.com.br/ais/_next/public/asteroid/default/btn-app_store.svg"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div id="footer-container">
+        <div class="row" id="links-container">
+          <div class="col-5 links-container" id="highlights-container">
+            <h6>Destaques</h6>
+            <a href="">Smartphone Moto G</a>
+            <a href="">Smartphone Samsung Galaxy</a>
+            <a href="">Smartphone iPhone</a>
+            <a href="">Geladeira frost free</a>
+            <a href="">Smart tv</a>
+            <a href="">Mapa do Site</a>
+            <a href="">Cupons de Desconto</a>
+            <a href="">Conheça nossa extensão</a>
+          </div>
+
+          <div class="col-5 links-container" id="buscape-container">
+            <div class="row" id="buscape-info">
+              <h6>O Buscapé</h6>
+              <a href="">Sua privacidade</a>
+              <a href="">Trabalhe com a gente</a>
+              <a href="">Imprensa</a>
+              <a href="">Canal de Conduta e Ética</a>
+            </div>
+            <div class="row" id="stores-info">
+              <h6>Marcas e lojas</h6>
+              <a href="">Anuncie com a gente</a>
+              <a href="">Área do anunciante</a>
+            </div>
+          </div>
+
+          <div class="col-2 links-container" id="help-container">
+            <h6>Precisa de ajuda?</h6>
+            <button id="help-button">Fale conosco</button>
+          </div>
+        </div>
+
+        <div class="row" id="resume-container">
+          <p id="brands-container">
+            Compare preços e produtos de Samsung, Motorola, Dell, LG, Electrolux e outras grandes marcas.
+          </p>
+        </div>
+
+        <div class="row" id="lastInfo-container">
+          <div class="col-4" id="social-media-container">
+            <a href="" class="social-media" id="facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path d="M26.492 53.247V34.361h-6.295v-7.869h6.295v-6.295c0-6.401 3.729-9.404 9.443-9.404 2.737 0 7.869-.039 7.869-.039v7.869h-6.295c-3.107 0-3.148.983-3.148 3.148v4.721h6.295v7.869h-6.295v18.886h-7.869z"></path></svg>
+            </a>
+            <a href="" class="social-media" id="twitter">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path d="M52.46 19.394zm-12.589-3.91c-4.638 0-8.395 3.733-8.395 8.339 0 .654.075 1.29.218 1.901a23.88 23.88 0 01-17.303-8.714 8.238 8.238 0 00-1.136 4.192 8.314 8.314 0 003.732 6.941 8.413 8.413 0 01-3.802-1.042v.105c0 4.041 2.895 7.411 6.732 8.178a8.473 8.473 0 01-3.791.142 8.396 8.396 0 007.843 5.791 16.902 16.902 0 01-10.426 3.571c-.677 0-1.346-.041-2.003-.116a23.882 23.882 0 0012.868 3.746c15.443 0 23.887-12.706 23.887-23.726 0-.363-.007-.721-.023-1.079a16.996 16.996 0 004.188-4.316 16.87 16.87 0 01-4.82 1.313 8.377 8.377 0 003.691-4.614 16.877 16.877 0 01-5.329 2.023 8.416 8.416 0 00-6.13-2.635z"></path></svg>
+            </a>
+            <a href="" class="social-media" id="instagram">
+              <i data-feather="instagram"></i>
+            </a>
+            <a href="" class="social-media" id="youtube">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+                <path d="M27.612 25.579l10.068 6.716 1.411-.729-11.479-5.987z"></path>
+                <path d="M52.82 23.513s-.418-2.926-1.691-4.214c-1.616-1.691-3.427-1.699-4.255-1.797-5.948-.429-14.867-.429-14.867-.429h-.018s-8.919 0-14.864.429c-.831.098-2.641.108-4.258 1.797-1.274 1.289-1.689 4.214-1.689 4.214s-.425 3.435-.425 6.871v3.22c0 3.436.425 6.871.425 6.871s.415 2.926 1.689 4.213c1.617 1.69 3.742 1.637 4.685 1.812 3.401.325 14.448.427 14.448.427s8.928-.015 14.876-.442c.828-.098 2.639-.108 4.255-1.797 1.273-1.289 1.691-4.213 1.691-4.213s.426-3.435.426-6.871v-3.22c0-3.437-.427-6.871-.427-6.871zM27.614 37.506l-.003-11.927 11.479 5.986-11.476 5.941z"></path></svg>
+            </a>
+            <a href="" class="social-media" id="android">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path d="M47.651 24.033c-1.434 0-2.595 1.18-2.595 2.636v10.3c0 1.456 1.162 2.636 2.595 2.636s2.595-1.18 2.595-2.636v-10.3c0-1.456-1.162-2.636-2.595-2.636zm-31.302 0c-1.434 0-2.595 1.18-2.595 2.636v10.3c0 1.456 1.162 2.636 2.595 2.636s2.595-1.18 2.595-2.636v-10.3c0-1.456-1.163-2.636-2.595-2.636zM20.506 24.113v18.818c0 1.118.906 2.023 2.023 2.023h2.313v5.73c0 1.456 1.162 2.636 2.595 2.636s2.595-1.18 2.595-2.636v-5.73h4.039v5.73c0 1.456 1.162 2.636 2.595 2.636s2.595-1.18 2.595-2.636v-5.73h2.311a2.023 2.023 0 002.023-2.023V24.113H20.504zM37.473 14.362l2.133-3.097c.127-.183.095-.426-.07-.54s-.402-.058-.529.127l-2.215 3.216c-1.46-.575-3.083-.896-4.791-.896s-3.331.32-4.791.896l-2.215-3.216c-.127-.185-.364-.241-.529-.127s-.197.355-.07.54l2.133 3.097c-3.391 1.578-5.77 4.575-6.073 8.075h23.092c-.303-3.5-2.682-6.497-6.074-8.075zm-10.344 4.88a1.278 1.278 0 110-2.556 1.278 1.278 0 010 2.556zm9.901 0a1.278 1.278 0 110-2.556 1.278 1.278 0 010 2.556z"></path></svg>
+            </a>
+            <a href="" class="social-media" id="apple">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><path d="M49.111 24.975c-2.203-2.745-5.292-4.332-8.208-4.332-3.858 0-5.489 1.833-8.165 1.833-2.758 0-4.857-1.829-8.194-1.829-3.278 0-6.763 1.99-8.973 5.392-3.109 4.786-2.582 13.79 2.459 21.462 1.803 2.742 4.211 5.828 7.36 5.856 2.798.026 3.59-1.786 7.388-1.807s4.515 1.826 7.313 1.801c3.148-.03 5.689-3.445 7.49-6.19 1.292-1.965 1.773-2.957 2.777-5.181-7.289-2.753-8.461-13.052-1.246-17.005zm-11.134-7.397c1.402-1.798 2.466-4.338 2.079-6.934-2.29.158-4.967 1.615-6.531 3.514-1.419 1.724-2.591 4.279-2.134 6.765 2.499.076 5.086-1.418 6.587-3.344z"></path></svg>              
+            </a>
+          </div>
+          <div class="col-8" id="copyright-container">
+            <div class="row">
+              <p>O uso deste site está sujeito aos termos e condições do <a href="" class="link">Termo de Uso</a> e <a href="" class="link">Política de privacidade.</a></p>
+              <p>© Zoom & Buscapé. Todos os direitos reservados.</p>
+            </div>
+            <div class="row">
+              <p id="contact">Mosaico Tecnologia ao Consumidor S.A. / CNPJ: 09.083.175/0001-84 / Rua Visconde de Caravelas, 14 2º andar - Rio de Janeiro / RJ - 22271-022 / Fale conosco <a href="" class="link">https://www.buscape.com.br/atendimento</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/less@4.1.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script>
+      feather.replace();
+    </script>
+    <script>
+      new Glide('.glide').mount()
+    </script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
